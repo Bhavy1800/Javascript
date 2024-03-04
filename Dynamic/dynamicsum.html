@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var l1=document.createElement("label");
+        l1.innerHTML="Number 1:";
+        l1.id="num_1";
+        document.body.appendChild(l1);
+
+        var t1=document.createElement("input");
+        t1.type="number";
+        t1.id="n1";
+        document.body.appendChild(t1);
+
+        document.body.appendChild(document.createElement("br"));
+        document.body.appendChild(document.createElement("br"));
+
+        var l2=document.createElement("label");
+        l2.innerHTML="Number 2:";
+        l2.id="num_2";
+        document.body.appendChild(l2);
+
+        var t2=document.createElement("input");
+        t2.type="number";
+        t2.id="n2";
+        document.body.appendChild(t2);
+
+        document.body.appendChild(document.createElement("br"));
+        document.body.appendChild(document.createElement("br"));
+
+        var b1=document.createElement("input");
+        b1.type="Submit";
+        b1.value="Submit";
+        b1.id="btn1";
+        b1.onclick=(function ()
+        {
+            var sum=parseInt(t1.value)+parseInt(t2.value);
+            document.write(sum);
+        });w
+        document.body.appendChild(b1);
+
+
+        
+
+    </script>
+</body>
+</html>

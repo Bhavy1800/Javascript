@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" style="border: 4px solid black; width: 400px; min-height: 50px; line-height: 60px;margin: auto;padding: 20px;">
+        <div>
+            Enter the value 1: <input type="number" name="" id="text1">
+        </div>
+        <div>
+            Enter the value 1: <input type="number" name="" id="text2">
+        </div>
+        <div>
+            <button onclick="sum()">+</button>
+            <button onclick="min()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button>
+        </div>
+        <div>
+            Result : <label for="" id="ans"></label>
+        </div>
+    </div>
+</body>
+<script>
+    function sum()
+    {
+        // alert("hello")
+        var a=parseInt(text1.value);
+        var b=parseInt(text2.value);
+
+        var t=a+b;       
+        // to print answer on label
+        ans.innerHTML=t;
+    }
+    function min()
+    {
+        var a=parseInt(text1.value);
+        var b=parseInt(text2.value);
+
+        var t=a-b;       
+        ans.innerHTML=t;
+    }
+    function mul()
+    {
+        var a=parseInt(text1.value);
+        var b=parseInt(text2.value);
+
+        var t=a*b;       
+        ans.innerHTML=t;
+    }
+    function div()
+    {
+        var a=parseInt(text1.value);
+        var b=parseInt(text2.value);
+
+        var t=a/b;       
+        ans.innerHTML=t;
+    }
+
+</script>
+</html>

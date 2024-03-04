@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="drop1" onchange="myfun1()">
+      <option value="Red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+    <!-- <button>Submit</button> -->
+  </body>
+  <script>
+    function myfun1() {
+      document.body.style.backgroundColor = drop1.value;
+    }
+  </script>
+</html>

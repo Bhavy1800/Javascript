@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      element 1 :
+      <input type="number" name="" id="v1" />
+    </div>
+    <div>
+      element 2 :
+      <input type="number" name="" id="v2" />
+    </div>
+    <br />
+    <button onclick="max()">MAX</button>
+    <button onclick="min()">MIX</button>
+    <div>
+      <label for="Label" id="ans"></label>
+    </div>
+  </body>
+  <script>
+    function max() {
+      var a = parseInt(v1.value);
+      var b = parseInt(v2.value);
+      if (a > b) {
+        ans.innerHTML = a;
+      } else {
+        ans.innerHTML = b;
+      }
+    }
+    function min() {
+      var a = parseInt(v1.value);
+      var b = parseInt(v2.value);
+      if (a < b) {
+        ans.innerHTML = a;
+      } else {
+        ans.innerHTML = b;
+      }
+    }
+  </script>
+</html>

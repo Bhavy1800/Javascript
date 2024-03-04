@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter number 1 :<input type="text" name="" id="num_1">
+    <br><br>
+    Enter number 2 :<input type="text" name="" id="num_2">
+    <br><br>
+    Enter number 3 :<input type="text" name="" id="num_3">
+    <br><br>
+    Enter number 4 :<input type="text" name="" id="num_4">
+    <br><br>
+    Enter number 5 :<input type="text" name="" id="num_5">
+    <br><br>
+    <Button onclick="myfun1()">Submit</Button>
+    <br>    
+    <label for="" id="lbl1"></label>
+</body>
+
+<script>
+    function myfun1(){
+        var a=[];
+        var sum=0
+         a[0]=parseInt(num_1.value);
+        a[1]=parseInt(num_2.value);
+        a[2]=parseInt(num_3.value);
+        a[3]=parseInt(num_4.value);
+        a[4]=parseInt(num_5.value);
+        
+        for(i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+        sum=sum+a[i];
+        
+        }
+        
+document.write("Total="+sum);
+}
+</script>
+</html>

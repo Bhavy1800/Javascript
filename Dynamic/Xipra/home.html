@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var l1 = document.createElement("label");
+      l1.innerHTML = "Username";
+      l1.style.color = "blue";
+      document.body.appendChild(l1);
+
+      var t1 = document.createElement("input");
+      t1.type = "text";
+      t1.id = "txt1";
+      document.body.appendChild(t1);
+
+      document.write("<br>");
+      document.body.appendChild(document.createElement("br"));
+
+      var l2 = document.createElement("label");
+      l2.innerHTML = "Password";
+      l2.style.color = "blue";
+      document.body.appendChild(l2);
+
+      var t2 = document.createElement("input");
+      t2.type = "Password";
+      t2.id = "txt2";
+      document.body.appendChild(t2);
+
+      document.write("<br>");
+      document.body.appendChild(document.createElement("br"));
+
+      var l3 = document.createElement("label");
+      l3.innerHTML = "Gender";
+      l3.style.color = "blue";
+      document.body.appendChild(l3);
+
+      var r1 = document.createElement("input");
+      r1.type = "radio";
+      r1.id = "rdo1";
+      document.body.appendChild(r1);
+      var lm = document.createElement("label");
+      lm.innerHTML = "Male";
+      lm.style.color = "blue";
+      document.body.appendChild(lm);
+
+      var d1 = document.createElement("select");
+      d1.id = "drop1";
+      document.body.appendChild(d1);
+
+      var op1 = document.createElement("option");
+      op1.innerHTML = "Himatnagar";
+      op1.value = "Himatnagar";
+      d1.appendChild(op1);
+
+      var op2 = document.createElement("option");
+      op2.innerHTML = "Surat";
+      op2.value = "Surat";
+      d1.appendChild(op2);
+    </script>
+  </body>
+</html>

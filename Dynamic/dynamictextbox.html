@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="txt">
+    <script>
+                    document.body.appendChild(document.createElement("br"));
+                    document.body.appendChild(document.createElement("br"));
+                    
+        var b=document.createElement("input");
+        b.type="Submit";
+        b.id="btn";
+        
+        b.onclick=(function ()
+        {
+            document.body.appendChild(document.createElement("br"));
+            document.body.appendChild(document.createElement("br"));
+
+            for(i=1;i<= parseInt(txt.value);i++){
+                var t2=document.createElement("input");
+            t2.type="number";
+            t2.placeholder=("Textbox"+i);
+            document.body.appendChild(t2);
+            document.body.appendChild(document.createElement("br"));
+            document.body.appendChild(document.createElement("br"));
+            }
+        });
+        document.body.appendChild(b);
+    </script>
+</body>
+</html>

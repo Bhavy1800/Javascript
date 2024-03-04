@@ -1,0 +1,85 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.main
+{
+    width: 500px;
+    min-height: 50px;
+    margin: 50px auto;
+    border: 5px solid orange;
+}
+.head
+{
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+.head h2
+{
+    padding: 10px 20px;
+}
+.head h4
+{
+    padding: 10px 10px;
+    font-weight: 300;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.containt
+{
+    min-height: 50px;
+    line-height: 60px;
+    padding: 49px;
+    background-color: aquamarine;
+    border-bottom: 20px solid orange;  
+}
+.input
+{
+    margin-left: 50px;
+}
+.output
+{
+    margin-left: 50px;
+}
+
+.subject input
+{
+    width: 200px;
+    height: 30px;
+    margin: 12px 0px;
+    /* border: none; */
+    float: right;
+    margin-right: 50px;
+}
+.buttons button
+{
+    width: 126px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    margin:0px 2px;
+    background-color: green;
+    color: white; 
+    transition: 0.5s;
+}
+.buttons button:hover
+{
+    background-color: red;
+}
+.subject Label
+{
+    width: 200px;
+    height: 30px;
+    line-height: 37px;
+    display: inline-block;
+    color: black;
+    margin: -10px 0px;
+    background-color: white;
+    /* border: none; */
+    /* float: right; */
+    margin-right: 35px;
+}

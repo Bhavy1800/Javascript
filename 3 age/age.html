@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+    <style>
+        *
+        {
+
+            box-sizing: border-box;
+        }
+        .box
+        {
+            width: 500px;
+            min-height: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(229, 235, 173);
+            font-size: 16px;
+            font-weight:400;
+            border: 2 px solid rgb(135, 135, 235);
+            line-height: 60px;
+            margin: 50px auto;
+            /* text-align: center; */
+        }
+        div
+        {
+            width: 100%;
+        }
+        .main
+        {
+            padding: 20px;
+            padding-left: 70px;
+            font-size: 17px;
+        }
+        div label
+        {
+            width: 239px;
+            height: 30px;
+            line-height: 30px;
+            float:right;
+            margin: 13px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 6px ;
+        }
+        button
+        {
+            width: 150px;
+            height: 30px;
+            border: none;
+            background-color: rgb(255, 155, 32);
+            color: black;
+            margin: 0px 30% ;
+            border-radius: 6px ;
+        }
+        div button:hover
+        {
+            background-color:rgb(255, 140, 0) ;
+        }
+        .age input
+        {
+            width: 240px;
+            height: 30px;
+            line-height: 60px;
+            float:right;
+            margin: 13px; 
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 6px
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div style="text-align: center; color: black;font-size: 24px; font-weight: 300; background-color: rgb(174, 255, 0);padding: -50px; font-weight: 700;">AGE CALCULATOR</div>
+        <div class="main">
+            <div class="age">Enter Yuor Age : 
+                <input type="number" id="age" max="100" min="1">
+            </div>
+            <div><button type="submit" onclick="submit()">Click Here</button></div>
+            <div>Your Total Months : <label id="month"></label></div>
+            <div>Your Total Weeks : <label id="week"></label></div>
+            <div>Your Total Days : <label id="day"></label></div>
+            <div>Your Total Hrs : <label id="hrs"></label></div>
+            <div>Your Total Min : <label id="min"></label></div>
+            <div>Your Total Sec : <label id="sec"></label></div>
+        </div>
+    </div>
+</body>
+<script>
+    function submit()
+    {
+        var ae=parseInt(age.value);
+
+        var a=ae*12;
+        month.innerHTML=a;
+        var b=ae*12*52;
+        week.innerHTML=b;
+        var c=ae*12*52*7;
+        day.innerHTML=c;
+        var d=ae*12*52*7*24;
+        hrs.innerHTML=d;
+        var e=ae*12*52*7*24*60;
+        min.innerHTML=e;
+        var f=ae*12*52*7*24*60*60;
+        sec.innerHTML=f;
+    }
+</script>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>ONLINE EXAM</div>
+    <div>
+      <h5>1.---> 12+13</h5>
+      <input type="radio" name="A" id="A1" value="21" />21
+      <input type="radio" name="A" id="B1" value="25" />25
+      <input type="radio" name="A" id="C1" value="27" />27
+    </div>
+    <div>
+      <h5>2.---> 12*5</h5>
+      <input type="radio" name="B" id="A2" value="60" />60
+      <input type="radio" name="B" id="B2" value="85" />85
+      <input type="radio" name="B" id="C2" value="70" />70
+    </div>
+    <div>
+      <h5>3.---> 65-10+90</h5>
+      <input type="radio" name="C" id="A3" value="145" />145
+      <input type="radio" name="C" id="B3" value="155" />155
+      <input type="radio" name="C" id="C3" value="135" />135
+    </div>
+    <div>
+      <h5>4.---> 128/8</h5>
+      <input type="radio" name="D" id="A4" value="24" />24
+      <input type="radio" name="D" id="B4" value="12" />12
+      <input type="radio" name="D" id="C4" value="16" />16
+    </div>
+    <div>
+      <h5>5.---> X+23=35 then X= ?</h5>
+      <input type="radio" name="E" id="A5" value="12" />12
+      <input type="radio" name="E" id="B5" value="16" />16
+      <input type="radio" name="E" id="C5" value="22" />22
+    </div>
+    <div>
+      <button onclick="submit()">submit</button>
+      <button onclick="clear1()">clear</button>
+      <button onclick="exit()">exit</button>
+    </div>
+    <div>
+      Attend : <label for="" id="attend"></label>
+      <br />
+      UnAttend
+      <label for="" id="unattend"></label>
+      <br />
+      Wrong Answer : <label for="" id="wrong"></label>
+      <br />
+      Right Answer : <label for="" id="right"></label>
+      <br />
+      get Mark :
+      <label for="" id="mark"></label>
+      <br />
+      cut of Mark :
+      <label for="" id="cutoff"></label>
+      <br />
+      result :
+      <label for="" id="result"></label>
+    </div>
+  </body>
+  <script>
+    function submit() {
+      var at = 0,
+        uat = 0,
+        wa = 0,
+        ra = 0,
+        m = 0,
+        cm = 0,
+        r = 0;
+      //   if (
+      //     B1.checked == true &&
+      //     A2.checked == true &&
+      //     A3.checked == true &&
+      //     C4.checked == true &&
+      //     A5.checked == true
+      //   ) {
+      //     at++;
+      //   }
+      if (B1.checked == true) {
+        ra++;
+        at++;
+      } else if (A1.checked == true || C1.checked == true) {
+        wa++;
+        at++;
+      } else if (
+        A1.checked == false ||
+        B1.checked == false ||
+        C1.checked == false
+      ) {
+        uat++;
+      }
+      // question 2
+      if (A2.checked == true) {
+        ra++;
+        at++;
+      } else if (B2.checked == true || C2.checked == true) {
+        wa++;
+        at++;
+      } else if (
+        A2.checked == false ||
+        B2.checked == false ||
+        C2.checked == false
+      ) {
+        uat++;
+      }
+
+      //   question 3
+      if (A3.checked == true) {
+        ra++;
+        at++;
+      } else if (B3.checked == true || C3.checked == true) {
+        wa++;
+        at++;
+      } else if (
+        A3.checked == false ||
+        B3.checked == false ||
+        C3.checked == false
+      ) {
+        uat++;
+      }
+
+      //   question 4
+      if (C4.checked == true) {
+        ra++;
+        at++;
+      } else if (B4.checked == true || A4.checked == true) {
+        wa++;
+        at++;
+      } else if (
+        A4.checked == false ||
+        B4.checked == false ||
+        C4.checked == false
+      ) {
+        uat++;
+      }
+      //   question 5
+      if (A5.checked == true) {
+        ra++;
+        at++;
+      } else if (B5.checked == true || C5.checked == true) {
+        wa++;
+        at++;
+      } else if (
+        A5.checked == false ||
+        B5.checked == false ||
+        C5.checked == false
+      ) {
+        uat++;
+      }
+
+      attend.innerHTML = at;
+      unattend.innerHTML = uat;
+      wrong.innerHTML = wa;
+      right.innerHTML = ra;
+      mark.innerHTML = ra * 4;
+      cutoff.innerHTML = wa + uat;
+      result.innerHTML = ra * 4 - wa - uat;
+    }
+    function clear1() {
+      attend.innerHTML = "";
+      unattend.innerHTML = "";
+      wrong.innerHTML = "";
+      right.innerHTML = "";
+      mark.innerHTML = "";
+      cutoff.innerHTML = "";
+      result.innerHTML = "";
+      // alert("hello");
+      A1.checked = false;
+      B1.checked = false;
+      C1.checked = false;
+
+      A2.checked = false;
+      B2.checked = false;
+      C2.checked = false;
+
+      A3.checked = false;
+      B3.checked = false;
+      C3.checked = false;
+
+      A4.checked = false;
+      B4.checked = false;
+      C4.checked = false;
+
+      A5.checked = false;
+      B5.checked = false;
+      C5.checked = false;
+    }
+    function exit() {
+      window.close();
+    }
+  </script>
+</html>

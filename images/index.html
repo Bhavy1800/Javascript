@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <select name="" id="drop1" onchange="myfun1()">
+        <option value="url(img_1.jpeg)">Image-1</option>
+        <option value="url(img_2.jpeg)">Image-2</option>
+        <option value="url(img_3.jpeg)">Image-3</option>
+        
+    </select>
+</body>
+<script>
+  function myfun1()
+    {
+        document.body.style.backgroundImage=drop1.value;
+        document.body.style.margin="200px";
+        document.body.style.backgroundRepeat="no-repeat";
+        
+    }
+</script>
+</html>

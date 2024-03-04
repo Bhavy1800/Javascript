@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basic</title>
+  </head>
+  <body>
+    <div class="main" style="width: 400px; margin: auto; margin-top: 300px">
+      <div
+        class="box"
+        style="border: 4px solid black; line-height: 30px; padding: 20px"
+      >
+        Enter the value 1:<input type="text" name="" id="txt1" />
+        <br />
+        <br />
+        Enter the value 2:<input type="text" name="" id="txt2" />
+        <br />
+        <br />
+        <button onclick="myfun1()">+</button>
+        <button onclick="myfun2()">-</button>
+        <button onclick="myfun3()">*</button>
+        <button onclick="myfun4()">/</button>
+        <br />
+        <br />
+        <label for="Result">Result:</label>
+        <label for="Label" id="lblans"></label>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function myfun1() {
+      //alert("helllo");
+
+      var a = parseInt(txt1.value);
+      var b = parseInt(txt2.value);
+
+      var t = a + b;
+
+      lblans.innerHTML = t;
+    }
+
+    function myfun2() {
+      //alert("helllo");
+
+      var a = parseInt(txt1.value);
+      var b = parseInt(txt2.value);
+
+      var t = a - b;
+
+      lblans.innerHTML = t;
+    }
+
+    function myfun3() {
+      //alert("helllo");
+
+      var a = parseInt(txt1.value);
+      var b = parseInt(txt2.value);
+
+      var t = a * b;
+
+      lblans.innerHTML = t;
+    }
+
+    function myfun4() {
+      //alert("helllo");
+
+      var a = parseInt(txt1.value);
+      var b = parseInt(txt2.value);
+
+      var t = a / b;
+
+      lblans.innerHTML = t;
+    }
+  </script>
+</html>

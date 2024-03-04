@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h5>5*2 = ?</h5>
+      <input type="radio" name="A" id="a" />8
+      <input type="radio" name="A" id="b" />9
+      <input type="radio" name="A" id="c" />10
+      <input type="radio" name="A" id="d" />11
+    </div>
+    <button onclick="submit()">Clik</button>
+    <br />
+    <label for="Lable" id="ans"></label>
+  </body>
+  <script>
+    function submit() {
+      if (c.checked == true) {
+        ans.innerHTML = "10 is right answer";
+      } else {
+        ans.innerHTML = "wrong ans";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marksheet</title>
+    <link rel="stylesheet" href="marksheet.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <h2>MARKSHEET</h2>
+      </div>
+      <div class="containt">
+        <div class="input">
+          <div class="subject">
+            GUJARATI<input type="number" name="" id="guj" />
+          </div>
+          <div class="subject">
+            ENGLISH<input type="number" name="" id="eng" />
+          </div>
+          <div class="subject">
+            MATHS<input type="number" name="" id="maths" />
+          </div>
+          <div class="subject">
+            SCIENCE<input type="number" name="" id="science" />
+          </div>
+          <div class="subject">
+            HINDI<input type="number" name="" id="hindi" />
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="submit" onclick="submit()">SUBMIT</button>
+          <button type="" onclick="CLEAR()">CLEAR</button>
+          <button onclick="EXIT()">EXIT</button>
+        </div>
+        <div class="head">
+          <h4>RESULT</h4>
+        </div>
+        <div class="output">
+          <div class="subject">TOTAL : <label id="total"></label></div>
+          <div class="subject">PERCENTAGE : <label id="pr"></label></div>
+          <div class="subject">GRADE : <label id="grade"></label></div>
+          <div>
+            <label for="" id="result"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function submit() {
+      var a = parseInt(guj.value);
+      var b = parseInt(eng.value);
+      var c = parseInt(maths.value);
+      var d = parseInt(science.value);
+      var e = parseInt(hindi.value);
+
+      if (
+        a > 100 ||
+        a < 0 ||
+        b > 100 ||
+        b < 0 ||
+        c > 100 ||
+        c < 0 ||
+        d > 100 ||
+        d < 0 ||
+        e > 100 ||
+        e < 0
+      ) {
+        alert("You Entered wrong marks");
+      } else {
+        if (a <= 35 && b <= 35 && c <= 35 && d <= 35 && e <= 35) {
+          var t = a + b + c + d + e;
+          var p = t / 5;
+          total.innerHTML = t;
+          pr.innerHTML = p;
+          if (p > 90) {
+            grade.innerHTML = "A";
+          } else if (p < 90 && p > 80) {
+            grade.innerHTML = "B";
+          } else if (p < 80 && p > 70) {
+            grade.innerHTML = "C";
+          } else if (p < 70 && p > 60) {
+            grade.innerHTML = "D";
+          } else if (p < 60 && p > 50) {
+            grade.innerHTML = "E";
+          } else if (p < 50 && p > 40) {
+            grade.innerHTML = "EE";
+          }
+        } else {
+          pr.innerHTML = "--";
+          total.innerHTML = "--";
+          grade.innerHTML = "you are failed...";
+        }
+      }
+    }
+    function CLEAR() {
+      guj.value = "";
+      eng.value = "";
+      maths.value = "";
+      science.value = "";
+      hindi.value = "";
+      total.innerHTML = "";
+      pr.innerHTML = "";
+      grade.innerHTML = "";
+    }
+    function EXIT() {
+      window.close();
+    }
+  </script>
+</html>

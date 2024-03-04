@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter number 1 :<input type="text" name="" id="num_1">
+    <br><br>
+    Enter number 2 :<input type="text" name="" id="num_2">
+    <br><br>
+    Enter number 3 :<input type="text" name="" id="num_3">
+    <br><br>
+    Enter number 4 :<input type="text" name="" id="num_4">
+    <br><br>
+    Enter number 5 :<input type="text" name="" id="num_5">
+    <br><br>
+    <Button onclick="myfun1()">Submit</Button>
+    <Button onclick="myfun2()">Max</Button>
+    <Button onclick="myfun3()">Min</Button>
+    <br>    
+
+</body>
+
+<script>
+    function myfun1(){
+        var a=[];
+        var sum=0
+         a[0]=parseInt(num_1.value);
+        a[1]=parseInt(num_2.value);
+        a[2]=parseInt(num_3.value);
+        a[3]=parseInt(num_4.value);
+        a[4]=parseInt(num_5.value);
+        
+        for(i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+            sum=sum+a[i];
+        
+        }
+        document.write("Sum is = "+sum);
+        
+            
+
+            
+         
+}
+
+function myfun2(){
+        var a=[];
+        var max=0;
+         a[0]=parseInt(num_1.value);
+        a[1]=parseInt(num_2.value);
+        a[2]=parseInt(num_3.value);
+        a[3]=parseInt(num_4.value);
+        a[4]=parseInt(num_5.value);
+        // if(a[0]>a[1] &&a[0]>a[2] &&a[0]>a[3] &&a[0]>a[4] ){
+        //         document.write(a[0]+"is maximum");
+        //     }else if(a[1]>a[0] &&a[1]>a[2] &&a[1]>a[3] &&a[1]>a[4] ){
+        //         document.write(a[1]+"is maximum");
+        //     }else if(a[2]>a[0] &&a[2]>a[1] &&a[2]>a[3] &&a[2]>a[4] ){
+        //         document.write(a[2]+"is maximum");
+        //     }else if(a[3]>a[0] &&a[3]>a[2] &&a[3]>a[1] &&a[3]>a[4] ){
+        //         document.write(a[3]+"is maximum");
+        //     }else if(a[4]>a[0] &&a[4]>a[2] &&a[4]>a[3] &&a[4]>a[1] ){
+        //         document.write(a[4]+"is maximum");
+        //     }
+        for(i=0;i<=a.length;i++){
+            if(a[i]>max){
+               max=a[i];
+            }
+
+        }
+        document.write(max+"is maximum");
+}
+
+
+
+function myfun3(){
+        var a=[];
+      
+         a[0]=parseInt(num_1.value);
+        a[1]=parseInt(num_2.value);
+        a[2]=parseInt(num_3.value);
+        a[3]=parseInt(num_4.value);
+        a[4]=parseInt(num_5.value);
+        var min=a[0];
+        // if(a[0]<a[1] &&a[0]<a[2] &&a[0]<a[3] &&a[0]<a[4] ){
+        //         document.write(a[0]+"is minimum");
+        //     }else if(a[1]<a[0] &&a[1]<a[2] &&a[1]<a[3] &&a[1]<a[4] ){
+        //         document.write(a[1]+"is minimum");
+        //     }else if(a[2]<a[0] &&a[2]<a[1] &&a[2]<a[3] &&a[2]<a[4] ){
+        //         document.write(a[2]+"is minimum");
+        //     }else if(a[3]<a[0] &&a[3]<a[2] &&a[3]<a[1] &&a[3]<a[4] ){
+        //         document.write(a[3]+"is minimum");
+        //     }else if(a[4]<a[0] &&a[4]<a[2] &&a[4]<a[3] &&a[4]<a[1] ){
+        //         document.write(a[4]+"is minimum");
+        //     }
+            for(i=0;i<=a.length;i++){
+            if(a[i]<min){
+               min=a[i];
+            }
+
+        }
+        document.write(min+"is minimum");
+}
+</script>
+</html>

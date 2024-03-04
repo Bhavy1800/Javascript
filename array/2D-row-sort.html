@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter number 1 :<input type="text" name="" id="num_1">
+    <br><br>
+    Enter number 2 :<input type="text" name="" id="num_2">
+    <br><br>
+    Enter number 3 :<input type="text" name="" id="num_3">
+    <br><br>
+    Enter number 4 :<input type="text" name="" id="num_4">
+    <br><br>
+    Enter number 5 :<input type="text" name="" id="num_5">
+    <br><br>
+    Enter number 6 :<input type="text" name="" id="num_6">
+    <br><br>
+    Enter number 7 :<input type="text" name="" id="num_7">
+    <br><br>
+    Enter number 8 :<input type="text" name="" id="num_8">
+    <br><br>
+    Enter number 9 :<input type="text" name="" id="num_9">
+    <br><br>
+    <Button onclick="myfun1()">Submit</Button>
+    <br>    
+    <label for="" id="lbl1"></label>
+</body>
+
+<script>
+    function myfun1()
+    {
+
+        var a=parseInt(num_1.value);
+        var b=parseInt(num_2.value);
+        var c=parseInt(num_3.value);
+        var d=parseInt(num_4.value);
+        var e=parseInt(num_5.value);
+        var f=parseInt(num_6.value);  
+        var g=parseInt(num_7.value);
+        var h=parseInt(num_8.value);
+        var i=parseInt(num_9.value);
+      
+
+        var x=[[a,b,c],[d,e,f],[g,h,i]];
+            for(i=0;i<3;i++){
+                for(j=0;j<3-1;j++){
+                    if(x[i][j]>x[i][j]){
+                    
+                    }
+                    document.write(x[i][j]+" ");
+                }
+                document.write("<br>");
+            } 
+
+    }
+</script>
+</html>

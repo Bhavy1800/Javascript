@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="search" />
+    <button id="submit" onclick="myFun()">search</button>
+    <br />
+    <label for="" id="lbl"></label>
+  </body>
+  <script>
+    function myFun() {
+      var a = ["ram", "janak", "vyom", "bhavy", "sita"];
+      var name = search.value;
+
+      var t = 0;
+      for (i = 0; i < a.length; i++) {
+        {
+          if (a[i] == name) {
+            t = 1;
+          }
+        }
+
+        if (t == 1) {
+          lbl.innerHTML = " founded";
+        } else {
+          lbl.innerHTML = " not found";
+        }
+      }
+    }
+  </script>
+</html>

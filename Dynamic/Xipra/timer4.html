@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .time {
+        width: 500px;
+        margin: 50px auto 0;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      div {
+        width: 500px;
+        margin: -40px auto 0;
+        padding: 0 40px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      button,
+      label {
+        width: 120px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        /* padding: 12px 0px; */
+        margin: 10px;
+        background-color: azure;
+        color: black;
+        text-align: center;
+      }
+      #lbl5 {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="time">
+      <label id="lbl1">0</label>: <label id="lbl2">0</label>:
+      <label id="lbl3">0</label>:
+      <label id="lbl4">0</label>
+    </div>
+    <div>
+      <br /><label>ms</label>:<label>sec</label>:<label>min</label>:<label
+        >hour</label
+      >
+    </div>
+    <div class="time">
+      <button onclick="start()">Start</button>
+      <button onclick="stop()">Stop</button>
+      <button onclick="clear1()">Clear</button>
+      <button onclick="flag()">Flag</button>
+    </div>
+    <label for="" id="lbl5"></label>
+  </body>
+  <script>
+    var ms = 0;
+    var sec = 0;
+    var min = 0;
+    var hour = 0;
+    var timer;
+    function timeCount() {
+      lbl1.innerHTML = ms;
+      ms++;
+      if (ms == 100) {
+        sec++;
+        lbl2.innerHTML = sec;
+        ms = 0;
+        if (sec == 60) {
+          min++;
+          lbl3.innerHTML = min;
+          sec = 0;
+          if (min == 60) {
+            hour++;
+            lbl4.innerHTML = hour;
+            min = 0;
+          }
+        }
+      }
+    }
+    function start() {
+      timer = setInterval(timeCount, 10);
+    }
+    function stop() {
+      timer = clearInterval(timer);
+    }
+    function clear1() {
+      // alert("hell0");
+      clearInterval(timer);
+      lbl1.innerHTML = "0";
+      lbl2.innerHTML = "0";
+      lbl3.innerHTML = "0";
+      lbl4.innerHTML = "0";
+    //   lbl5.innerHTML = "0";
+      ms = 0;
+      sec = 0;
+      min = 0;
+      hour = 0;
+    }
+
+    var fl = 0;
+    function flag() {
+      fl++;
+      lbl5.innerHTML =
+        "<br>" +
+        ms +
+        " : ms , " +
+        sec +
+        " : sec , " +
+        min +
+        " : min , " +
+        hour +
+        " : hour , " +
+        lbl5.innerHTML;
+    }
+  </script>
+</html>

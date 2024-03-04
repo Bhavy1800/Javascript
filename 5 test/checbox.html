@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" name="c++" id="a" />c++
+      <input type="checkbox" name="python" id="b" />python
+      <input type="checkbox" name="android" id="c" />android
+    </div>
+    <button onclick="submit()">Clik</button>
+    <label for="" id="ans1"></label>
+    <label for="" id="ans2"></label>
+    <label for="" id="ans3"></label>
+  </body>
+  <script>
+    function submit() {
+      if (a.checked == true) {
+        ans1.innerHTML = "C++";
+      }
+      if (b.checked == true) {
+        ans2.innerHTML = "python";
+      }
+      if (c.checked == true) {
+        ans3.innerHTML = "android";
+      }
+    }
+  </script>
+</html>
