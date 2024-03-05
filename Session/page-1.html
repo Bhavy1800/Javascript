@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Name">Name</label><input type="text" name="" id="txtname">
+    <label for="Surname">Surname</label><input type="text" name="" id="txtsurname">
+    <button onclick="myfun1()">Submit</button>
+</body>
+<script>
+    function myfun1() {
+     
+        
+        sessionStorage.setItem("s1",txtname.value);
+        sessionStorage.setItem("s2",txtsurname.value);
+        window.location.href="page2.html";
+
+
+    }
+</script>
+</html>

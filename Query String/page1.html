@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(216, 255, 255);
+      }
+      .main {
+        height: 200px;
+        width: 250px;
+        margin: auto;
+        padding: 20px;
+        border: 3px solid gray;
+        border-radius: 10px;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div>Name : <input type="text" name="" id="txtname" /></div>
+      <br />
+      <div>Email : <input type="email" name="" id="txtemail" /></div>
+      <br />
+      <div>Password : <input type="password" name="" id="pw" /></div>
+      <br />
+      <div>
+        Gender : <input type="radio" name="A" id="male" value="male" />Male
+        <input type="radio" name="A" id="female" value="female" />Female
+      </div>
+      <br />
+      <div><button id="submit" onclick="myfun1()">Submit</button></div>
+    </div>
+  </body>
+  <script>
+    var gen="";
+    function myfun1(){
+     if(male.checked == true){
+      gen =male.value;
+     } else {
+      gen=female.value;
+     } 
+     window.location.href ="page3.html?name="+txtname.value+"&email="+txtemail.value+"&password="+pw.value+"&gender="+gen;
+
+    }
+  </script>
+</html>

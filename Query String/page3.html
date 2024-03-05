@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(216, 255, 255);
+      }
+      .main {
+        height: 200px;
+        width: 250px;
+        margin: auto;
+        padding: 20px;
+        border: 3px solid gray;
+        border-radius: 10px;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <br />
+      <div>
+        <label for="">Welcome</label>
+        <br />
+        &nbsp; <label for="" id="lbl1"></label>
+      </div>
+      <div><label for="" id="lbl2"></label></div>
+      <div><label for="" id="lbl3"></label></div>
+      <br />
+      <div>Gender : <label for="" id="gender"></label></div>
+      <br />
+      <script>
+        lbl1.innerHTML = sessionStorage.getItem("s1");
+        lbl2.innerHTML = sessionStorage.getItem("s2");
+        lbl3.innerHTML = sessionStorage.getItem("s3");
+        gender.innerHTML = sessionStorage.getItem("s4");
+      </script>
+      <br />
+      <div><button id="logout" onclick="myfun3()">Logout</button></div>
+    </div>
+  </body>
+  <script>
+    function myfun3() {
+      window.location.href = "page1.html";
+    }
+  </script>
+</html>
